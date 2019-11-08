@@ -18,7 +18,7 @@ def faceDetect(img):
     for (x, y, w, h) in faces:
        #draw rectange
        result = cv2.rectangle(img, (x, y), (x + w, y + h), (200, 0, 0), 2)
-    #save file
+    #save file image
     path_file=('static/%s.jpg'%uuid.uuid4().hex)
     cv2.imwrite(path_file,result)
     path_file= 'http://127.0.0.1:5000/' + path_file
